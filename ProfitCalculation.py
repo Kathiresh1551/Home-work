@@ -22,4 +22,5 @@ for n in range(1, customerCount+1):  #for loop for coustomers
 
 totalProfit = totalProfit - totalSalary   #for labours salary 
 
-print("profit is ", totalProfit)   #the total salary
+print("profit is ", totalProfit)   #the total profit
+
