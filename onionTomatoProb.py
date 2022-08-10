@@ -13,9 +13,8 @@ else: #if city is not equals to all others, its gonna be 20rs
 
 petrol = budget*0.03 #for petrol we take 3% from the budget
 balanceAmount = budget - petrol #balance amount
-tomatoPerKg = balanceAmount//Tomato #in the balance amount we can buy this amount on tomato
-onionPerKg = balanceAmount//Onion #in the balance amount we can buy this amount on onion
-print ("petrol", petrol)
-print ("Tomato: ", tomatoPerKg,"kg" )
-print ("Onion: ", onionPerKg,"kg")
-
+tomatoPerKg = balanceAmount/Tomato #in the balance amount we can buy this amount on tomato
+onionPerKg = balanceAmount/Onion #in the balance amount we can buy this amount on onion
+print ("petrol: %.2f"% petrol,"rs")
+print ("Tomato: %.2f"% tomatoPerKg,"kg" )
+print ("Onion: %.2f"% onionPerKg,"kg")
