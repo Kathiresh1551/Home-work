@@ -32,4 +32,4 @@ for perMonth in range (0, len(month)):     #for loop in range of 0 to 12
 
 print(salaryPerYear)
 avgSalary = salaryPerYear / len(month)
-print("The average salary per year is: ", round(avgSalary))      #the final output is the average salary per year that is 120000 / 12 = 12000
+print("The average salary per year is: ", round(avgSalary))      #the final output is the average salary per year that is 120000 / 12 = 10000
