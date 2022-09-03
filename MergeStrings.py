@@ -17,3 +17,16 @@ else:
         finalOutput += reversedString[char] + ","                                                             #       ===>finaloutput=hser
     finalOutput += inputString[int(len(inputString)/2)] #additionly the missword in between is also added to the finalOutput   ===>finalOutput=kh,as,te,hr,i
 print(finalOutput)
+
+
+'''
+OUTPUT:
+
+enter the string: KATHIR
+KR,AI,TH,
+
+
+enter the string: KATHIRESH
+KH,AS,TE,HR,I
+
+'''
