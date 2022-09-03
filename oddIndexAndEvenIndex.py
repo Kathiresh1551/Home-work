@@ -17,3 +17,32 @@ else:
 for evenIndex in range (startIndex, -1, -2):            #the loop is runs for startindex that is modified (started in the last index or second last) to last first
     # index(we need to have the first index value so the -1 is placed)
     print(inputString[evenIndex])
+    
+    
+'''
+enter the string: kathir
+odd
+a
+h
+r
+-------------------------
+even
+i
+t
+k
+
+
+enter the string: kathiresh
+odd
+a
+h
+r
+s
+-------------------------
+even
+h
+e
+i
+t
+k
+'''
