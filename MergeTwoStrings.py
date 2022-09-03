@@ -12,3 +12,14 @@ else:                                                      # in else part
        finalOutput += firstInput[Index]                  #storing the each characters of the firstInput in finalOutput
        finalOutput += secondInput[Index]                   #storing the each characters of the secondInput in finalOutput
 print(finalOutput)                      #A1B2C3D4
+
+'''
+enter the string: KATHIR
+enter the string: 150501
+K1A5T0H5I0R1
+
+
+enter the string: KATHIR
+enter the string: 1551
+K1A5T5H1
+'''
