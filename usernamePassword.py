@@ -60,7 +60,7 @@ for index in range (0, len(inputUsername)):
 if(validPassword == len(inputUsername)):
     print("password successfull")
 elif(noatChar != len(inputUsername)):                           
-    print("password not success")
+    print("incorrect password")
 
 '''
 output:
@@ -80,5 +80,17 @@ invalid user name
 enter username: myname@sayur.com 
 enter password: mnamesay123S     
 password successfull
+
+enter username: myname@sayur.com
+enter password: myname@sayur.com 
+incorrect password
+
+enter username: myname@sayur.com
+enter password: ktamp000
+incorrect password
+
+enter username: myname@sayur.com 
+enter password: kathiresh        
+incorrect password
 
 '''
