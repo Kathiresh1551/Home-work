@@ -34,7 +34,6 @@ def saleCalculation (totalAmount, vadaiSupply, restockCount, soldVadai):
     print('totalAmount', totalAmount)
     print('restockCount', restockCount)
     print('soldVadai', soldVadai)
-    # return totalAmount, soldVadai, restockCount0
 
 
 saleCalculation(totalAmount, vadaiSupply, restockCount, soldVadai)
