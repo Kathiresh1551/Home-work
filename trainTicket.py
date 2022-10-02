@@ -45,7 +45,7 @@ if(isReturn == "yes"):
     returnCost = returnFunction(nonReturnCost,  membersCount, isSenior)
     print("₹",round(returnCost))
 else:
-    print("₹", round(nonReturnCost))
+    print("₹",round(nonReturnCost))
 
 '''
 welcome to KB Travels
