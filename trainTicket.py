@@ -43,9 +43,9 @@ nonReturnCost = costCalculation(membersCount, isSenior)
 
 if(isReturn == "yes"):
     returnCost = returnFunction(nonReturnCost,  membersCount, isSenior)
-    print(round(returnCost))
+    print("₹",round(returnCost))
 else:
-    print(round(nonReturnCost))
+    print("₹", round(nonReturnCost))
 
 '''
 welcome to KB Travels
@@ -53,7 +53,7 @@ Bus for Madurai to Chennai
 Return?(type yes or no): no
 How many members?:1
 Senior Citizen: 0
-1000
+₹1000
 
 
 welcome to KB Travels
@@ -61,25 +61,26 @@ Bus for Madurai to Chennai
 Return?(type yes or no): yes
 How many members?:1
 Senior Citizen: 0
-1750
+₹1750
 
 welcome to KB Travels
 Bus for Madurai to Chennai
 Return?(type yes or no): yes
 How many members?:2
 Senior Citizen: 2
-1750
+₹1750
 
 welcome to KB Travels
 Bus for Madurai to Chennai
 Return?(type yes or no): no
 How many members?:4
 Senior Citizen: 0
-3200
+₹3200
 
 welcome to KB Travels
 Bus for Madurai to Chennai
 Return?(type yes or no): no
 How many members?:4
-Senior C
+Senior Citizen: 1
+₹2800
 '''
