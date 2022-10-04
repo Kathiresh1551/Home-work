@@ -1,4 +1,4 @@
-file1 = open("C:\\Users\itssm\python\Sayur\Home-work\Others\\FileTester.csv","r")
+file1 = open("C:\\Users\itssm\python\Sayur\Home-work\Others\\CafeItemDetails.csv","r")
 arrList = file1.readlines()
 itemList = []
 priceList = []
