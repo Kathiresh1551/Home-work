@@ -69,41 +69,39 @@ def isVowelAtLast():                             #isVowelAtLast function is chec
     
 
 def HandleReversing():                             #HandleReversing function is call when the user input has no vowel char present at last and no number present in between
-    for index in range (int(len(userWord)/2) + 1, len(userWord)):
-        finalWord.append(userWord[index])           #here im appending the last to middle chars
-    if len(userWord) %2 != 0:
+    if len(userWord) %2 != 0:                       #this condition is for userWord len is odd
+        for index in range (int(len(userWord)/2 + 1), len(userWord)):
+            finalWord.append(userWord[index]) 
         centerWord=int(len(userWord) / 2)
         finalWord.append(userWord[centerWord])       #here im appending the middle char
     else:
+        for index in range (int(len(userWord)/2), len(userWord)):  #this condition is for userWord len is even
+            finalWord.append(userWord[index]) 
         centerWord=int(len(userWord) / 2)
-        finalWord.append(userWord[centerWord])
     for index in range (0, int(len(userWord)/2)):
         finalWord.append(userWord[index])           #here im appending rest
     return finalWord
+                    
 
+def numbersInUserword():            #numberInUsedword is call when any number in userWord
+    ObtainNumber = ""
+    obtainText = ""
+    for index in userWord:         #spliting the numbers
+        if index.isdigit():
+            ObtainNumber = ObtainNumber + index
+        else:
+            obtainText = obtainText + index
 
-def numbersInUserword():                    #numbersInUserword is call when the user input has any numbers
     for index in range (len(userWord)):
         for key in numbersDict:
-            if (userWord[index] == numbersDict[key]["number"]):     #here checking the entered num equals in numbersDict
-                if userWord[0] != numbersDict[key]["number"]:
-                    for ind in range (0, index):
-                        finalWord.append(userWord[ind])          #appending the first half berfore the number
-                    for ind in range (0, index):
-                        if numbersDict[key]["number"] in userWord:
-                            removeDupes.append('A' + numbersDict[key]["numberInWord"] + 'A')   #appending the number with A
-                    finalWord.append(*set(removeDupes))
-                    for ind in range (index + 1, len(userWord)):
-                        finalWord.append(userWord[ind]) #appending the rest
-                else:
-                    for ind in range (0, index+1):
-                        if numbersDict[key]["number"] in userWord:
-                            finalWord.append('A' + numbersDict[key]["numberInWord"] + 'A')
-                    for ind in range (index + 1, len(userWord)):
-                        finalWord.append(userWord[ind])
-    return finalWord                    
+            if numbersDict[key]["number"] == userWord[index]:
+                finalWord.append('A' + numbersDict[key]["numberInWord"] + 'A')  #appending the number as per the hw
+            elif userWord[index].isdigit() == False:
+                finalWord.append(userWord[index])
+                break
+    return finalWord
 
-
+# numbersInUserword()
 isDigit = userWord.isdigit()     #isdight says is number present
 for checkingVowel in range (len(vowelWords)):
     if userWord[len(userWord) - 1] == vowelWords[checkingVowel]:   #checking number present
@@ -112,8 +110,9 @@ for checkingVowel in range (len(vowelWords)):
         noVowel += 1
 for ind in range (0, len(userWord)):
     if userWord[ind].isdigit():
-        output = numbersInUserword()
         isVowel = -1
+        output = numbersInUserword()
+        break
 if isVowel == 1:
     output = isVowelAtLast()
 elif isVowel == 0:
@@ -136,4 +135,7 @@ output: AeightA m k
 
 input: room
 output: m o r o
+
+input: ka15th51ir
+output: k a AoneA AfiveA t h AfiveA AoneA i r
 '''
