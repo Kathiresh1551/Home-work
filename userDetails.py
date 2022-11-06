@@ -10,7 +10,6 @@ def calculator():
 def employees():
     emp = [
         {"salutation": "Mr", "Name": "Kathiresh", "lastName": "C", "phoneNumber": "123456789", "occupation": "FrontEnd Developer"},
-        # {"salutation": "Miss", "Name": "Gayathri", "lastName": "Kathiresh", "phoneNumber": "789456123", "occupation": "BackEnd Developer"},
     ]
     return emp
 
