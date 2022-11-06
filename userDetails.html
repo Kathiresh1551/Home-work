@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <title>User Details</title>
+        <script></script>
+        <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+        <script>
+            $(document).ready(function() {
+            $("#empDetails").click(function(){
+                var empurl = 'http://127.0.0.1:5000/employees'
+                $.ajax({
+                    url: empurl,  
+                    success: function(ele){
+                        console.log('----------->, success', ele.Name)
+                        result = ''
+                        for (var emp in ele) {
+                            result = result + 'Hi ' + ele[emp].salutation + '.' + ele[emp].Name + ' ' + ele[emp].lastName 
+                            + ' your phone number is ' + ele[emp].phoneNumber + ' and your occupation is ' + ele[emp].occupation;
+                        }
+                        debugger;
+                        $("#result").text(result);
+                    },
+                    error: function(){
+                        console.log('---------->, error')
+                        $("#result").text('Invalid')
+                    }
+                })
+
+            })
+
+            $("#empSalutation").click(function() {
+                var empSalutation = 'http://127.0.0.1:5000/employee'
+                $.ajax({
+                    url: empSalutation,
+                    success: function(ele) {
+                        result = "employee's salutation is " + ele.salutation;
+                        $("#resultSalutation").text(result)
+                    },
+                    error: function() {
+                        $("#resultSalutation").text('Error')
+                    }
+                })
+            })
+
+            $("#empName").click(function() {
+                var empSalutation = 'http://127.0.0.1:5000/employee'
+                $.ajax({
+                    url: empSalutation,
+                    success: function(ele) {
+                        result = "employee's first name is "+ ele.salutation + ' ' + ele.Name + ' ' + ele.lastName;
+                        $("#resultName").text(result)
+                    },
+                    error: function() {
+                        $("#resultName").text('Error')
+                    }
+                })
+            })
+
+            $("#empPhone").click(function() {
+                var empSalutation = 'http://127.0.0.1:5000/employee'
+                $.ajax({
+                    url: empSalutation,
+                    success: function(ele) {
+                        result = ele.salutation + '.' + ele.Name + ' '+ ele.lastName + " 's phone number is " + ele.phoneNumber;
+                        $("#resultPhoneNumber").text(result)
+                    },
+                    error: function() {
+                        $("#resultPhoneNumber").text('Error')
+                    }
+                })
+            })
+
+            $("#empOccupation").click(function() {
+                var empSalutation = 'http://127.0.0.1:5000/employee'
+                $.ajax({
+                    url: empSalutation,
+                    success: function(ele) {
+                        result = ele.salutation + '.' + ele.Name + ' '+ ele.lastName + " 's occupation is " + ele.occupation;
+                        $("#resultOccupation").text(result)
+                    },
+                    error: function() {
+                        $("#resultOccupation").text('Error')
+                    }
+                })
+            })
+        })
+        </script>
+        <style>
+            input {
+                padding: 10px;
+                margin-top: 25px;
+            }
+            button {
+                padding: 5px;
+                margin-top: 50px
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <!-- <input id="salutation" type="text" placeholder="Salutation" /><br />
+            <input id="firstName" type="text" placeholder="First Name" /><br />
+            <input id="lastName" type="text" placeholder="Last Name" /><br />
+            <input id="phNo" type="number" placeholder="Phone Number" /><br />
+            <input id="occupation" type="text" placeholder="Occupation" /><br /> -->
+
+            <button id="empSalutation">Employee salutation</button>
+            <button id="empName">Employee Name</button>
+            <button id="empPhone">Employee Phone Number</button>
+            <button id="empOccupation">Employee Occupation</button>
+
+            <button id="empDetails">Get Details</button><br />
+
+            
+            <lable id="resultSalutation"></lable><br />
+            <lable id="resultName"></lable><br />
+            <lable id="resultPhoneNumber"></lable><br />
+            <lable id="resultOccupation"></lable><br />
+            <lable id="result"></lable>
+        </center>
+    </body>
+</html>
